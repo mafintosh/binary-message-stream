@@ -11,7 +11,7 @@ module.exports = class Messenger extends streamx.Duplex {
   }
 
   _write (data, cb) {
-    while (data.length) {
+    while (data.length && !this.destroying) {
       if (this.buffer) {
         const offset = this.buffer.length - this.missing
         data.copy(this.buffer, offset)
