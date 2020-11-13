@@ -1,0 +1,21 @@
+{
+  "name": "binary-message-stream",
+  "version": "0.0.0",
+  "description": "Duplex stream that allows you to send messages, including binary messages",
+  "main": "index.js",
+  "dependencies": {
+    "borc": "^2.1.2",
+    "streamx": "^2.7.2"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mafintosh/binary-message-stream.git"
+  },
+  "author": "Mathias Buus (@mafintosh)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mafintosh/binary-message-stream/issues"
+  },
+  "homepage": "https://github.com/mafintosh/binary-message-stream"
+}
