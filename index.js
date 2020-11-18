@@ -60,8 +60,8 @@ module.exports = class Messenger extends streamx.Duplex {
     const header = Buffer.alloc(3)
     const buf = borc.encode(msg)
     header[0] = buf.length & 0x0000ff
-    header[1] = (buf.length & 0x00ff00) >>> 2
-    header[2] = (buf.length & 0xff0000) >>> 4
+    header[1] = (buf.length & 0x00ff00) >>> 8
+    header[2] = (buf.length & 0xff0000) >>> 16
     this.push(Buffer.concat([header, buf]))
   }
 }
